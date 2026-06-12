@@ -1,12 +1,3 @@
-/*
-=================================================
-CATÁLOGO DE PRODUCTOS
-
-Muestra información de cada suplemento.
-
-=================================================
-*/
-
 function mostrarInfo(producto) {
 
     if (producto === "whey") {
@@ -40,16 +31,6 @@ function mostrarInfo(producto) {
     }
 
 }
-
-/*
-=================================================
-RECOMENDADOR DE SUPLEMENTOS
-
-Analiza el objetivo seleccionado
-y recomienda un producto.
-
-=================================================
-*/
 
 function recomendarSuplemento(objetivo) {
 

@@ -1,394 +1,379 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Power Supplements</title>
+<title>Power Supplements</title>
 
-    <meta name="description"
-        content="Power Supplements - Suplementos deportivos para potenciar tu rendimiento físico.">
+<meta name="description"
+    content="Power Supplements - Suplementos deportivos para potenciar tu rendimiento físico.">
 
-    <link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/styles.css">
+```
 
 </head>
 
 <body>
 
-    <!-- ======================
-         HEADER / NAVBAR
-    ======================= -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <nav>
+    <nav>
 
-            <div class="logo">
-                <h2>POWER SUPPLEMENTS</h2>
-            </div>
+        <div class="logo">
+            <h2>POWER SUPPLEMENTS</h2>
+        </div>
 
-            <ul>
+        <ul>
 
-                <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#inicio">Inicio</a></li>
 
-                <li><a href="#productos">Productos</a></li>
+            <li><a href="#productos">Productos</a></li>
 
-                <li><a href="#objetivos">Objetivos</a></li>
+            <li><a href="#objetivos">Objetivos</a></li>
 
-                <li><a href="#calculadora">Calculadora</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
 
-                <li><a href="#testimonios">Opiniones</a></li>
+            <li><a href="#testimonios">Opiniones</a></li>
 
-                <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contacto">Contacto</a></li>
 
-            </ul>
+        </ul>
 
-            <button onclick="cambiarTema()">
-                🌙
-            </button>
+        <div id="carrito">
+            🛒 Carrito:
+            <span id="contadorCarrito">0</span>
+        </div>
 
-        </nav>
+    </nav>
 
-    </header>
+</header>
 
-    <!-- ======================
-         HERO PRINCIPAL
-    ======================= -->
+<!-- HERO -->
 
-    <section id="inicio" class="hero">
+<section id="inicio" class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <h1>
-                TRANSFORMA TU CUERPO
-            </h1>
+        <h1>TRANSFORMA TU CUERPO</h1>
+
+        <p>
+            Potencia tu rendimiento con suplementos deportivos de calidad.
+        </p>
+
+        <a href="#productos" class="btn">
+            VER CATÁLOGO
+        </a>
+
+    </div>
+
+</section>
+
+<!-- GALERÍA -->
+
+<section class="galeria">
+
+    <h2>Nuestros Productos Destacados</h2>
+
+    <div class="imagenes">
+
+        <img src="img/producto1.png" alt="Producto 1">
+
+        <img src="img/producto2.webp" alt="Producto 2">
+
+        <img src="img/producto3.png" alt="Producto 3">
+
+    </div>
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section id="productos">
+
+    <h2>Catálogo de Suplementos</h2>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <img src="img/whey.jpg" alt="Whey Protein">
+
+            <h3>Whey Protein</h3>
 
             <p>
-                Potencia tu rendimiento con suplementos de calidad.
+                Proteína ideal para aumentar masa muscular.
             </p>
 
-            <a href="#productos" class="btn">
-                VER CATÁLOGO
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- ======================
-         GALERÍA FITNESS
-    ======================= -->
-
-    <section class="galeria">
-
-        <h2>Nuestros Productos Destacados</h2>
-
-        <div class="imagenes">
-
-            <!-- CAMBIAR POR TUS IMÁGENES -->
-
-            <img src="img/producto1.jpg" alt="Suplemento 1">
-
-            <img src="img/producto2.jpg" alt="Suplemento 2">
-
-            <img src="img/producto3.jpg" alt="Suplemento 3">
-
-            <img src="img/producto4.jpg" alt="Suplemento 4">
-
-        </div>
-
-    </section>
-
-    <!-- ======================
-         PRODUCTOS
-    ======================= -->
-
-    <section id="productos">
-
-        <h2>Catálogo de Suplementos</h2>
-
-        <div class="cards">
-
-            <article class="card">
-
-                <img src="img/whey.jpg" alt="Whey Protein">
-
-                <h3>Whey Protein</h3>
-
-                <p>
-                    Proteína ideal para el crecimiento muscular.
-                </p>
-
-                <button onclick="mostrarInfo('whey')">
-                    Ver información
-                </button>
-
-            </article>
-
-            <article class="card">
-
-                <img src="img/creatina.jpg" alt="Creatina">
-
-                <h3>Creatina Monohidratada</h3>
-
-                <p>
-                    Incrementa fuerza y rendimiento físico.
-                </p>
-
-                <button onclick="mostrarInfo('creatina')">
-                    Ver información
-                </button>
-
-            </article>
-
-            <article class="card">
-
-                <img src="img/preentreno.jpg" alt="Pre Entreno">
-
-                <h3>Pre Entreno</h3>
-
-                <p>
-                    Energía y concentración para tus entrenamientos.
-                </p>
-
-                <button onclick="mostrarInfo('preentreno')">
-                    Ver información
-                </button>
-
-            </article>
-
-        </div>
-
-    </section>
-
-    <!-- ======================
-         OBJETIVOS FITNESS
-    ======================= -->
-
-    <section id="objetivos">
-
-        <h2>¿Cuál es tu objetivo?</h2>
-
-        <div class="objetivos-container">
-
-            <button onclick="recomendarSuplemento('masa')">
-                Ganar Masa Muscular
+            <button onclick="abrirModal(
+            'Whey Protein',
+            'Proteína ideal para aumentar masa muscular.',
+            '$120.000'
+            )">
+                Ver producto
             </button>
 
-            <button onclick="recomendarSuplemento('fuerza')">
-                Aumentar Fuerza
+        </article>
+
+        <article class="card">
+
+            <img src="img/creatina.jpg" alt="Creatina">
+
+            <h3>Creatina Monohidratada</h3>
+
+            <p>
+                Incrementa fuerza y rendimiento físico.
+            </p>
+
+            <button onclick="abrirModal(
+            'Creatina Monohidratada',
+            'Incrementa fuerza, potencia y recuperación.',
+            '$80.000'
+            )">
+                Ver producto
             </button>
 
-            <button onclick="recomendarSuplemento('energia')">
-                Más Energía
+        </article>
+
+        <article class="card">
+
+            <img src="img/preentreno.jpg" alt="Pre Entreno">
+
+            <h3>Pre Entreno</h3>
+
+            <p>
+                Energía y concentración para entrenamientos intensos.
+            </p>
+
+            <button onclick="abrirModal(
+            'Pre Entreno',
+            'Mayor energía y enfoque durante tus entrenamientos.',
+            '$100.000'
+            )">
+                Ver producto
             </button>
 
-        </div>
+        </article>
 
-        <div id="recomendacion"></div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- ======================
-         CALCULADORA FITNESS
-    ======================= -->
+<!-- OBJETIVOS -->
 
-    <section id="calculadora">
+<section id="objetivos">
 
-        <h2>Calculadora Fitness</h2>
+    <h2>¿Cuál es tu objetivo?</h2>
 
-        <p>
-            Calcula tu consumo recomendado de proteína.
-        </p>
+    <div class="objetivos-container">
 
-        <input
-            type="number"
-            id="peso"
-            placeholder="Ingrese su peso en kg">
-
-        <button onclick="calcularProteina()">
-            Calcular
+        <button onclick="recomendarSuplemento('masa')">
+            Ganar Masa Muscular
         </button>
 
-        <div id="resultado"></div>
+        <button onclick="recomendarSuplemento('fuerza')">
+            Aumentar Fuerza
+        </button>
 
-    </section>
+        <button onclick="recomendarSuplemento('energia')">
+            Más Energía
+        </button>
 
-    <!-- ======================
-         BENEFICIOS
-    ======================= -->
+    </div>
 
-    <section class="beneficios">
+    <div id="recomendacion"></div>
 
-        <h2>¿Por qué elegirnos?</h2>
+</section>
 
-        <div class="cards-beneficios">
+<!-- CALCULADORA -->
 
-            <article>
+<section id="calculadora">
 
-                <h3>🚚 Envíos Rápidos</h3>
+    <h2>Calculadora Fitness</h2>
 
-                <p>
-                    Entregas seguras a nivel nacional.
-                </p>
+    <p>
+        Calcula tu consumo recomendado de proteína.
+    </p>
 
-            </article>
+    <input
+        type="number"
+        id="peso"
+        placeholder="Ingrese su peso en kg">
 
-            <article>
+    <button onclick="calcularProteina()">
+        Calcular
+    </button>
 
-                <h3>🧪 Calidad Garantizada</h3>
+    <div id="resultado"></div>
 
-                <p>
-                    Productos certificados y originales.
-                </p>
+</section>
 
-            </article>
+<!-- BENEFICIOS -->
 
-            <article>
+<section class="beneficios">
 
-                <h3>💪 Resultados Reales</h3>
+    <h2>¿Por qué elegirnos?</h2>
 
-                <p>
-                    Suplementación respaldada por evidencia.
-                </p>
+    <div class="cards-beneficios">
 
-            </article>
+        <article>
 
+            <h3>🚚 Envíos Rápidos</h3>
+
+            <p>
+                Entregas seguras a nivel nacional.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>🧪 Calidad Garantizada</h3>
+
+            <p>
+                Productos originales y certificados.
+            </p>
+
+        </article>
+
+        <article>
+
+            <h3>💪 Resultados Reales</h3>
+
+            <p>
+                Suplementación respaldada por evidencia.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIOS -->
+
+<section id="testimonios">
+
+    <h2>Opiniones de Clientes</h2>
+
+    <div class="cards-testimonios">
+
+        <article>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                Excelente calidad y resultados.
+            </p>
+
+            <strong>Juan Pérez</strong>
+
+        </article>
+
+        <article>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                Muy buen servicio y productos originales.
+            </p>
+
+            <strong>Laura Gómez</strong>
+
+        </article>
+
+        <article>
+
+            <h3>⭐⭐⭐⭐⭐</h3>
+
+            <p>
+                Mi rendimiento mejoró bastante.
+            </p>
+
+            <strong>Carlos Torres</strong>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <form action="#" method="post" class="contact-form">
+        <div>
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
         </div>
 
-    </section>
-
-    <!-- ======================
-         TRANSFORMACIONES
-    ======================= -->
-
-    <section class="transformaciones">
-
-        <h2>Transformaciones</h2>
-
-        <div class="antes-despues">
-
-            <!-- CAMBIAR POR TUS IMÁGENES -->
-
-            <div>
-
-                <h3>Antes</h3>
-
-                <img src="img/antes.jpg" alt="Antes">
-
-            </div>
-
-            <div>
-
-                <h3>Después</h3>
-
-                <img src="img/despues.jpg" alt="Después">
-
-            </div>
-
+        <div>
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" required>
         </div>
 
-    </section>
-
-    <!-- ======================
-         TESTIMONIOS
-    ======================= -->
-
-    <section id="testimonios">
-
-        <h2>Opiniones de Clientes</h2>
-
-        <div class="cards-testimonios">
-
-            <article>
-
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    Excelente calidad y resultados.
-                </p>
-
-                <strong>Juan Pérez</strong>
-
-            </article>
-
-            <article>
-
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    Muy buen servicio y productos originales.
-                </p>
-
-                <strong>Laura Gómez</strong>
-
-            </article>
-
-            <article>
-
-                <h3>⭐⭐⭐⭐⭐</h3>
-
-                <p>
-                    Mi rendimiento mejoró bastante.
-                </p>
-
-                <strong>Carlos Torres</strong>
-
-            </article>
-
+        <div>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
+        <button type="submit">Enviar mensaje</button>
+      </form>
     </section>
 
-    <!-- ======================
-         CONTACTO
-    ======================= -->
+</section>
 
-    <section id="contacto">
+<!-- MODAL -->
 
-        <h2>Contáctanos</h2>
+<div id="modalProducto" class="modal">
 
-        <form>
+    <div class="modal-content">
 
-            <input
-                type="text"
-                placeholder="Nombre"
-                required>
+        <span
+            class="cerrar"
+            onclick="cerrarModal()">
+            &times;
+        </span>
 
-            <input
-                type="email"
-                placeholder="Correo"
-                required>
+        <h2 id="tituloModal"></h2>
 
-            <textarea
-                placeholder="Mensaje"
-                rows="5"></textarea>
+        <p id="descripcionModal"></p>
 
-            <button type="submit">
-                Enviar Mensaje
-            </button>
+        <p id="precioModal"></p>
 
-        </form>
+        <button
+            id="botonModal"
+            onclick="agregarCarrito(document.getElementById('tituloModal').innerText)">
+            Agregar al carrito
+        </button>
 
-    </section>
+    </div>
 
-    <!-- ======================
-         FOOTER
-    ======================= -->
+</div>
 
-    <footer>
+<!-- FOOTER -->
 
-        <p>
-            © 2026 Power Supplements | Todos los derechos reservados
-        </p>
+<footer>
 
-    </footer>
+    <p>
+        © 2026 Power Supplements | Todos los derechos reservados
+    </p>
 
-    <script src="js/calculadora.js"></script>
-    <script src="js/catalogo.js"></script>
-    <script src="js/tema.js"></script>
+</footer>
+
+<script src="scripts/calculadora.js"></script>
+<script src="scripts/catalogo.js"></script>
+<script src="scripts/carrito.js"></script>
+
 
 </body>
 

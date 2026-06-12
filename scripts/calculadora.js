@@ -1,18 +1,3 @@
-/*
-=================================================
-CALCULADORA FITNESS
-Autor: Jhon Alexander
-Proyecto: Power Supplements
-
-Esta función calcula:
-
-1. Proteína diaria
-2. Agua recomendada
-3. Calorías aproximadas
-
-=================================================
-*/
-
 function calcularProteina() {
 
     // Obtener el peso ingresado por el usuario
