@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Power Supplements</title>
+
+    <meta name="description"
+        content="Power Supplements - Suplementos deportivos para potenciar tu rendimiento físico.">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+
+    <!-- ======================
+         HEADER / NAVBAR
+    ======================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                <h2>POWER SUPPLEMENTS</h2>
+            </div>
+
+            <ul>
+
+                <li><a href="#inicio">Inicio</a></li>
+
+                <li><a href="#productos">Productos</a></li>
+
+                <li><a href="#objetivos">Objetivos</a></li>
+
+                <li><a href="#calculadora">Calculadora</a></li>
+
+                <li><a href="#testimonios">Opiniones</a></li>
+
+                <li><a href="#contacto">Contacto</a></li>
+
+            </ul>
+
+            <button onclick="cambiarTema()">
+                🌙
+            </button>
+
+        </nav>
+
+    </header>
+
+    <!-- ======================
+         HERO PRINCIPAL
+    ======================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                TRANSFORMA TU CUERPO
+            </h1>
+
+            <p>
+                Potencia tu rendimiento con suplementos de calidad.
+            </p>
+
+            <a href="#productos" class="btn">
+                VER CATÁLOGO
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         GALERÍA FITNESS
+    ======================= -->
+
+    <section class="galeria">
+
+        <h2>Nuestros Productos Destacados</h2>
+
+        <div class="imagenes">
+
+            <!-- CAMBIAR POR TUS IMÁGENES -->
+
+            <img src="img/producto1.jpg" alt="Suplemento 1">
+
+            <img src="img/producto2.jpg" alt="Suplemento 2">
+
+            <img src="img/producto3.jpg" alt="Suplemento 3">
+
+            <img src="img/producto4.jpg" alt="Suplemento 4">
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         PRODUCTOS
+    ======================= -->
+
+    <section id="productos">
+
+        <h2>Catálogo de Suplementos</h2>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <img src="img/whey.jpg" alt="Whey Protein">
+
+                <h3>Whey Protein</h3>
+
+                <p>
+                    Proteína ideal para el crecimiento muscular.
+                </p>
+
+                <button onclick="mostrarInfo('whey')">
+                    Ver información
+                </button>
+
+            </article>
+
+            <article class="card">
+
+                <img src="img/creatina.jpg" alt="Creatina">
+
+                <h3>Creatina Monohidratada</h3>
+
+                <p>
+                    Incrementa fuerza y rendimiento físico.
+                </p>
+
+                <button onclick="mostrarInfo('creatina')">
+                    Ver información
+                </button>
+
+            </article>
+
+            <article class="card">
+
+                <img src="img/preentreno.jpg" alt="Pre Entreno">
+
+                <h3>Pre Entreno</h3>
+
+                <p>
+                    Energía y concentración para tus entrenamientos.
+                </p>
+
+                <button onclick="mostrarInfo('preentreno')">
+                    Ver información
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         OBJETIVOS FITNESS
+    ======================= -->
+
+    <section id="objetivos">
+
+        <h2>¿Cuál es tu objetivo?</h2>
+
+        <div class="objetivos-container">
+
+            <button onclick="recomendarSuplemento('masa')">
+                Ganar Masa Muscular
+            </button>
+
+            <button onclick="recomendarSuplemento('fuerza')">
+                Aumentar Fuerza
+            </button>
+
+            <button onclick="recomendarSuplemento('energia')">
+                Más Energía
+            </button>
+
+        </div>
+
+        <div id="recomendacion"></div>
+
+    </section>
+
+    <!-- ======================
+         CALCULADORA FITNESS
+    ======================= -->
+
+    <section id="calculadora">
+
+        <h2>Calculadora Fitness</h2>
+
+        <p>
+            Calcula tu consumo recomendado de proteína.
+        </p>
+
+        <input
+            type="number"
+            id="peso"
+            placeholder="Ingrese su peso en kg">
+
+        <button onclick="calcularProteina()">
+            Calcular
+        </button>
+
+        <div id="resultado"></div>
+
+    </section>
+
+    <!-- ======================
+         BENEFICIOS
+    ======================= -->
+
+    <section class="beneficios">
+
+        <h2>¿Por qué elegirnos?</h2>
+
+        <div class="cards-beneficios">
+
+            <article>
+
+                <h3>🚚 Envíos Rápidos</h3>
+
+                <p>
+                    Entregas seguras a nivel nacional.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>🧪 Calidad Garantizada</h3>
+
+                <p>
+                    Productos certificados y originales.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>💪 Resultados Reales</h3>
+
+                <p>
+                    Suplementación respaldada por evidencia.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         TRANSFORMACIONES
+    ======================= -->
+
+    <section class="transformaciones">
+
+        <h2>Transformaciones</h2>
+
+        <div class="antes-despues">
+
+            <!-- CAMBIAR POR TUS IMÁGENES -->
+
+            <div>
+
+                <h3>Antes</h3>
+
+                <img src="img/antes.jpg" alt="Antes">
+
+            </div>
+
+            <div>
+
+                <h3>Después</h3>
+
+                <img src="img/despues.jpg" alt="Después">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         TESTIMONIOS
+    ======================= -->
+
+    <section id="testimonios">
+
+        <h2>Opiniones de Clientes</h2>
+
+        <div class="cards-testimonios">
+
+            <article>
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    Excelente calidad y resultados.
+                </p>
+
+                <strong>Juan Pérez</strong>
+
+            </article>
+
+            <article>
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    Muy buen servicio y productos originales.
+                </p>
+
+                <strong>Laura Gómez</strong>
+
+            </article>
+
+            <article>
+
+                <h3>⭐⭐⭐⭐⭐</h3>
+
+                <p>
+                    Mi rendimiento mejoró bastante.
+                </p>
+
+                <strong>Carlos Torres</strong>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+         CONTACTO
+    ======================= -->
+
+    <section id="contacto">
+
+        <h2>Contáctanos</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Nombre"
+                required>
+
+            <input
+                type="email"
+                placeholder="Correo"
+                required>
+
+            <textarea
+                placeholder="Mensaje"
+                rows="5"></textarea>
+
+            <button type="submit">
+                Enviar Mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ======================
+         FOOTER
+    ======================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Power Supplements | Todos los derechos reservados
+        </p>
+
+    </footer>
+
+    <script src="js/calculadora.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/tema.js"></script>
+
+</body>
+
+</html>
